@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DREAM MOBILE - Новый онлайн-игра CRMP Mobile</title>
+    <title>DREAM MOBILE - Новая онлайн-игра CRMP Mobile</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -167,45 +167,61 @@
     <section id="donate" class="donate">
         <div class="container">
             <h2 class="section-title">Донат</h2>
-            <div class="donate-packages">
-                <div class="donate-card">
-                    <div class="donate-header">
-                        <h3>Стартовый</h3>
-                        <div class="donate-price">299₽</div>
+            <div class="donate-form-container">
+                <div class="donate-form-card">
+                    <div class="donate-form-header">
+                        <i class="fas fa-coins"></i>
+                        <h3>Пополнить баланс</h3>
+                        <p>Введите данные для покупки игровой валюты</p>
                     </div>
-                    <ul class="donate-features">
-                        <li><i class="fas fa-check"></i> 100,000 игровых рублей</li>
-                        <li><i class="fas fa-check"></i> VIP статус на 7 дней</li>
-                        <li><i class="fas fa-check"></i> Эксклюзивный скин</li>
-                    </ul>
-                    <button class="btn btn-donate">Купить</button>
-                </div>
-                <div class="donate-card featured">
-                    <div class="donate-badge">Популярный</div>
-                    <div class="donate-header">
-                        <h3>Продвинутый</h3>
-                        <div class="donate-price">599₽</div>
+                    <form class="donate-form" id="donateForm">
+                        <div class="form-group">
+                            <label for="nickname">Никнейм в игре</label>
+                            <input type="text" id="nickname" name="nickname" placeholder="Введите ваш никнейм" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="amount">Сумма доната (₽)</label>
+                            <div class="amount-input-container">
+                                <input type="number" id="amount" name="amount" placeholder="0" min="1" step="1" required>
+                                <div class="amount-suggestions">
+                                    <button type="button" class="amount-suggestion" data-amount="100">100₽</button>
+                                    <button type="button" class="amount-suggestion" data-amount="300">300₽</button>
+                                    <button type="button" class="amount-suggestion" data-amount="500">500₽</button>
+                                    <button type="button" class="amount-suggestion" data-amount="1000">1000₽</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="donate-benefits">
+                            <h4>Что вы получите:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Игровая валюта начисляется мгновенно</li>
+                                <li><i class="fas fa-check"></i> Эксклюзивные бонусы и скины</li>
+                                <li><i class="fas fa-check"></i> Поддержка проекта</li>
+                            </ul>
+                        </div>
+                        <button type="submit" class="btn btn-donate">
+                            <i class="fas fa-shopping-cart"></i>
+                            Купить
+                        </button>
+                    </form>
+                    
+                    <div class="donate-social-links">
+                        <h4>Наши социальные сети</h4>
+                        <div class="social-links-grid">
+                            <a href="#" class="social-link telegram">
+                                <i class="fab fa-telegram"></i>
+                                <span>Telegram</span>
+                            </a>
+                            <a href="#" class="social-link vk">
+                                <i class="fab fa-vk"></i>
+                                <span>VK</span>
+                            </a>
+                            <a href="#" class="social-link forum">
+                                <i class="fas fa-comments"></i>
+                                <span>Форум</span>
+                            </a>
+                        </div>
                     </div>
-                    <ul class="donate-features">
-                        <li><i class="fas fa-check"></i> 250,000 игровых рублей</li>
-                        <li><i class="fas fa-check"></i> VIP статус на 30 дней</li>
-                        <li><i class="fas fa-check"></i> 3 эксклюзивных скина</li>
-                        <li><i class="fas fa-check"></i> Премиум автомобиль</li>
-                    </ul>
-                    <button class="btn btn-donate">Купить</button>
-                </div>
-                <div class="donate-card">
-                    <div class="donate-header">
-                        <h3>Премиум</h3>
-                        <div class="donate-price">999₽</div>
-                    </div>
-                    <ul class="donate-features">
-                        <li><i class="fas fa-check"></i> 500,000 игровых рублей</li>
-                        <li><i class="fas fa-check"></i> VIP статус на 90 дней</li>
-                        <li><i class="fas fa-check"></i> Все эксклюзивные скины</li>
-                        <li><i class="fas fa-check"></i> Гараж премиум машин</li>
-                    </ul>
-                    <button class="btn btn-donate">Купить</button>
                 </div>
             </div>
         </div>
@@ -215,7 +231,7 @@
         <div class="container">
             <h2 class="cta-title">Готов начать?</h2>
             <p class="cta-description">
-                Присоединяйся к тысячам игроков в Dream Mobile и начни свой путь с бонусом 50 000 000Р прямо сейчас!
+                Присоединяйся к сотням игроков в Dream Mobile и начни свой путь с бонусом 50 000 000Р прямо сейчас!
             </p>
             <button class="btn btn-primary btn-large">НАЧАТЬ ИГРАТЬ</button>
             

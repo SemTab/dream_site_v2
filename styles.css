@@ -423,90 +423,240 @@ body {
     background: #0a0a0a;
 }
 
-.donate-packages {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+.donate-form-container {
+    display: flex;
+    justify-content: center;
     margin-top: 3rem;
 }
 
-.donate-card {
+.donate-form-card {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
+    padding: 3rem;
+    max-width: 500px;
+    width: 100%;
     position: relative;
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
 }
 
-.donate-card:hover {
-    transform: translateY(-10px);
+.donate-form-card:hover {
     border-color: #00a8ff;
+    transform: translateY(-5px);
 }
 
-.donate-card.featured {
-    border-color: #ffd700;
-    transform: scale(1.05);
-}
-
-.donate-badge {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffd700;
-    color: #000000;
-    padding: 5px 15px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-.donate-header {
+.donate-form-header {
+    text-align: center;
     margin-bottom: 2rem;
 }
 
-.donate-header h3 {
+.donate-form-header i {
+    font-size: 3rem;
+    color: #00a8ff;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.donate-form-header h3 {
     color: #ffffff;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
-.donate-price {
+.donate-form-header p {
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+.donate-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 1rem;
+    color: #ffffff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #00a8ff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.form-group input::placeholder {
+    color: #888888;
+}
+
+.amount-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.amount-suggestions {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.amount-suggestion {
+    background: rgba(0, 168, 255, 0.2);
+    border: 1px solid rgba(0, 168, 255, 0.3);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
     color: #00a8ff;
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.donate-features {
+.amount-suggestion:hover {
+    background: rgba(0, 168, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+.amount-suggestion.active {
+    background: #00a8ff;
+    color: #ffffff;
+}
+
+.donate-benefits {
+    background: rgba(0, 168, 255, 0.1);
+    border: 1px solid rgba(0, 168, 255, 0.2);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+}
+
+.donate-benefits h4 {
+    color: #00a8ff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.donate-benefits ul {
     list-style: none;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
-.donate-features li {
+.donate-benefits li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 0.75rem;
     color: #cccccc;
+    font-size: 0.9rem;
 }
 
-.donate-features i {
+.donate-benefits i {
     color: #00a8ff;
+    font-size: 0.8rem;
 }
 
 .btn-donate {
     background: linear-gradient(45deg, #00a8ff, #0097e6);
     color: white;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 1.2rem;
 }
 
 .btn-donate:hover {
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 168, 255, 0.3);
+}
+
+.btn-donate i {
+    font-size: 1rem;
+}
+
+.donate-social-links {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.donate-social-links h4 {
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.social-links-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.social-link:hover {
+    transform: translateY(-2px);
+    border-color: #00a8ff;
+}
+
+.social-link.telegram:hover {
+    background: #0088cc;
+    border-color: #0088cc;
+}
+
+.social-link.vk:hover {
+    background: #4a76a8;
+    border-color: #4a76a8;
+}
+
+.social-link.forum:hover {
+    background: #00a8ff;
+    border-color: #00a8ff;
+}
+
+.social-link i {
+    font-size: 1.1rem;
 }
 
 .cta {
@@ -630,8 +780,13 @@ body {
         grid-template-columns: 1fr;
     }
 
-    .donate-packages {
-        grid-template-columns: 1fr;
+    .donate-form-card {
+        padding: 2rem;
+        margin: 0 1rem;
+    }
+    
+    .amount-suggestions {
+        justify-content: center;
     }
 
     .footer-content {
@@ -662,6 +817,35 @@ body {
     .bonus-amount {
         font-size: 2rem;
     }
+    
+    .donate-form-card {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+    }
+    
+    .donate-form-header h3 {
+        font-size: 1.5rem;
+    }
+    
+    .amount-suggestions {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .amount-suggestion {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .social-links-grid {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .social-link {
+        width: 100%;
+        justify-content: center;
+    }
 }
 
 html {
@@ -682,6 +866,6 @@ html {
 .feature-card,
 .screenshot-item,
 .player-card,
-.donate-card {
+.donate-form-card {
     animation: fadeInUp 0.6s ease-out;
 } 
