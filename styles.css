@@ -294,6 +294,61 @@ body {
     background: #0a0a0a;
 }
 
+.reviews {
+    padding: 100px 0;
+    background: #000000;
+}
+
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.review-card:hover {
+    border-color: #00a8ff;
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(0, 168, 255, 0.18);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.review-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 168, 255, 0.15);
+    border: 1px solid rgba(0, 168, 255, 0.25);
+    font-size: 1.2rem;
+}
+
+.review-user {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.review-text {
+    color: #cccccc;
+}
+
 .screenshots-gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -869,3 +924,13 @@ html {
 .donate-form-card {
     animation: fadeInUp 0.6s ease-out;
 } 
+
+.review-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@media (max-width: 768px) {
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+}

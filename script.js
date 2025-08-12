@@ -88,7 +88,7 @@ const observer = new IntersectionObserver(function(entries) {
 }, observerOptions);
 
 document.addEventListener('DOMContentLoaded', function() {
-    const animatedElements = document.querySelectorAll('.feature-card, .screenshot-item, .player-card, .donate-form-card');
+    const animatedElements = document.querySelectorAll('.feature-card, .screenshot-item, .player-card, .donate-form-card, .review-card');
     
     animatedElements.forEach(el => {
         el.style.opacity = '0';
